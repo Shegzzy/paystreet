@@ -13,5 +13,8 @@ class AppColors{
   static const Color transactionIconContainerColor_3 = Color(0xFFE0F4ED);
   static const Color transactionIconContainerColor_2 = Color(0xFFDCDCE8);
   static const Color transactionIconContainerColor_1 = Color(0xFFEBEBFB);
-  static const Color homeIconColor_1 = Color(0xFF6669E0);
+  static const Color homeIconColor = Color(0xFF6669E0);
+  static const Color greyIconColor = Color(0xFFB9B9C6);
+  static const Color avatarContainerColor = Color(0xFFD9D9D9);
+  static const Color qrCodeContainerColor = Color(0xFFD6D6DB);
 }
