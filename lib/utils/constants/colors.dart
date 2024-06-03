@@ -17,4 +17,7 @@ class AppColors{
   static const Color greyIconColor = Color(0xFFB9B9C6);
   static const Color avatarContainerColor = Color(0xFFD9D9D9);
   static const Color qrCodeContainerColor = Color(0xFFD6D6DB);
+  static const Color textColor = Color(0xFF48484E);
+  static const Color iconColor = Color(0xFFB9B9C6);
+  static const Color backgroundColor = Color(0xFFFAFAFA);
 }
