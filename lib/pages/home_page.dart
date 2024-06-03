@@ -129,48 +129,38 @@ class _HomePageState extends State<HomePage> {
         items: [
           selectedIndex == 0 ?
           const BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded),
+            icon: Icon(Icons.home_filled),
             label: 'Home',
-            backgroundColor: AppColors.homeIconColor,
           ) : const BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             label: 'Home',
-            backgroundColor: AppColors.greyIconColor,
           ),
 
           selectedIndex == 1 ?
           const BottomNavigationBarItem(
             icon: Icon(Icons.inventory_2_rounded),
             label: 'Home',
-            backgroundColor: AppColors.homeIconColor,
-
           ) : const BottomNavigationBarItem(
             icon: Icon(Icons.inventory_2_outlined),
             label: 'Home',
-            backgroundColor: AppColors.greyIconColor,
-
           ),
 
           selectedIndex == 2 ?
           const BottomNavigationBarItem(
             icon: Icon(Icons.grid_view_rounded),
             label: 'Home',
-            backgroundColor: AppColors.homeIconColor,
           ) : const BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.square_grid_2x2),
             label: 'Home',
-            backgroundColor: AppColors.greyIconColor,
           ),
 
           selectedIndex == 3 ?
           const BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Home',
-            backgroundColor: AppColors.homeIconColor,
           ) : const BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),
             label: 'Home',
-            backgroundColor: AppColors.greyIconColor,
           ),
         ],
 

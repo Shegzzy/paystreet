@@ -4,13 +4,15 @@ import '../../utils/constants/dimensions.dart';
 
 class ShadowContainer extends StatelessWidget {
   final Widget child;
+  final EdgeInsets padding;
   const ShadowContainer({
-    super.key, required this.child,
+    super.key, required this.child, required this.padding,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: padding,
       margin: EdgeInsets.only(
           top: Dimensions.height8),
       decoration: BoxDecoration(
