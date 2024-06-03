@@ -30,10 +30,10 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    updateUser();
+    updateTitle();
   }
 
-  void updateUser() {
+  void updateTitle() {
     pageTitles = [
       '',
       'Wallet',
@@ -52,68 +52,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      // appBar: AppBar(
-      //   title: Text(
-      //     pageTitles[selectedIndex],
-      //   ),
-      //   surfaceTintColor: Colors.white,
-      //   // titleSpacing: 0,
-      //   centerTitle: true,
-      //   titleTextStyle: Fonts.fontInter(
-      //       fontWeight: FontWeight.w400,
-      //       fontSize: Dimensions.font20,
-      //       letterSpacing: 0.32,
-      //       color: AppColors.cardColor
-      //   ),
-      //   leading: Container(
-      //     margin: EdgeInsets.all(Dimensions.height10),
-      //     child: Row(
-      //       mainAxisAlignment: MainAxisAlignment.center,
-      //       crossAxisAlignment: CrossAxisAlignment.center,
-      //       children: [
-      //         ClipRRect(
-      //           borderRadius: BorderRadius.circular(Dimensions.radius30),
-      //           child: Container(
-      //             height: Dimensions.width34+4,
-      //             width: Dimensions.width34+4,
-      //             color: AppColors.avatarContainerColor,
-      //             child: Image.asset(
-      //                 'assets/images/avatar.png',
-      //               fit: BoxFit.contain,
-      //               width: 20,
-      //               height: 20,
-      //
-      //             ),
-      //           ),
-      //         ),
-      //         SizedBox(width: 5,),
-      //         Column(
-      //           children: [
-      //             Text('Hi, Esther Bukola', style: Fonts.fontInter(
-      //                 fontWeight: FontWeight.w400,
-      //                 fontSize: Dimensions.font12,
-      //                 letterSpacing: 0.32,
-      //                 color: AppColors.cardColor
-      //             ),),
-      //             Text('Good Evening', style: Fonts.fontInter(
-      //                 fontWeight: FontWeight.w700,
-      //                 fontSize: Dimensions.font16-1,
-      //                 letterSpacing: 0.32,
-      //                 color: AppColors.cardColor
-      //             ),)
-      //           ],
-      //         )
-      //       ],
-      //     ),
-      //   ),
-      //   actions: [
-      //       Container(
-      //         height: Dimensions.height45,
-      //         width: Dimensions.width45,
-      //         color: AppColors.qrCodeContainerColor,
-      //       )
-      //   ],
-      // ),
       body: SafeArea(
           child: pages[selectedIndex]
       ),
@@ -137,30 +75,30 @@ class _HomePageState extends State<HomePage> {
           ),
 
           selectedIndex == 1 ?
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.inventory_2_rounded),
-            label: 'Home',
-          ) : const BottomNavigationBarItem(
-            icon: Icon(Icons.inventory_2_outlined),
-            label: 'Home',
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/icons/wallet.png', scale: 6/3, color: AppColors.homeIconColor,),
+            label: 'Wallet',
+          ) : BottomNavigationBarItem(
+            icon: Image.asset('assets/icons/wallet.png', scale: 5/2, color: AppColors.greyIconColor,),
+            label: 'Wallet',
           ),
 
           selectedIndex == 2 ?
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.grid_view_rounded),
-            label: 'Home',
-          ) : const BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.square_grid_2x2),
-            label: 'Home',
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/icons/transactions.png', scale: 6/3, color: AppColors.homeIconColor,),
+            label: 'Transactions',
+          ) : BottomNavigationBarItem(
+            icon: Image.asset('assets/icons/transactions.png', scale: 5/2, color: AppColors.greyIconColor,),
+            label: 'Transactions',
           ),
 
           selectedIndex == 3 ?
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Home',
-          ) : const BottomNavigationBarItem(
-            icon: Icon(Icons.settings_outlined),
-            label: 'Home',
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/icons/profile.png', scale: 6/3, color: AppColors.homeIconColor,),
+            label: 'Profile',
+          ) : BottomNavigationBarItem(
+            icon: Image.asset('assets/icons/profile.png', scale: 5/2, color: AppColors.greyIconColor,),
+            label: 'Profile',
           ),
         ],
 

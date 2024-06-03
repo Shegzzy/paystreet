@@ -14,6 +14,8 @@ class HomeTabScreen extends StatefulWidget {
 }
 
 class _HomeTabScreenState extends State<HomeTabScreen> {
+  bool isBalanceVisible = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,6 +82,7 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
 
             SizedBox(height: Dimensions.height10,),
 
+            // balance card
             Card(
               color: AppColors.cardColor,
               child: Padding(
@@ -97,14 +100,21 @@ class _HomeTabScreenState extends State<HomeTabScreen> {
                               color: Colors.white
                           ),),
                         SizedBox(width: Dimensions.width8,),
-                        Icon(
-                          Icons.visibility_outlined,
-                          color: Colors.white,
-                          size: Dimensions.icon16,
+                        InkWell(
+                          onTap: (){
+                            setState(() {
+                              isBalanceVisible = !isBalanceVisible;
+                            });
+                          },
+                          child: Icon(
+                            isBalanceVisible ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+                            color: Colors.white,
+                            size: Dimensions.icon16,
+                          ),
                         )
                       ],
                     ),
-                    Text(PayStreetFormatter.currencyFormatter(7860.00),
+                    Text( isBalanceVisible ? PayStreetFormatter.currencyFormatter(7860.00) : '********',
                       style: Fonts.fontPrompt(
                           fontWeight: FontWeight.w400,
                           fontSize: Dimensions.font20+10,
